@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumo — encrypted cloud on your own Google Drive</title>
+<meta name="description" content="Kumo is a personal, end-to-end encrypted cloud file explorer on top of your own Google Drive accounts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%238a3ffc' d='M20 50a14 14 0 0 1-2-27.9A18 18 0 0 1 52 26a12 12 0 0 1-2 24z'/%3E%3C/svg%3E">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1b26; --muted: #5f5b70; --bg: #f7f6fb; --card: #ffffff; --line: #e6e3f0; --accent: #8a3ffc; --accent2: #c46bff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #eeecf6; --muted: #a7a2ba; --bg: #141219; --card: #1e1b26; --line: #2c2836; --accent: #b98aff; --accent2: #e3a6ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+  main { max-width: 860px; margin: 0 auto; padding: 56px 20px 40px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .logo { width: 96px; height: 96px; }
+  h1 { font-size: 3em; margin: 8px 0 0; letter-spacing: -0.02em;
+       background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lead { color: var(--muted); font-size: 1.15em; max-width: 560px; margin: 8px auto 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+  .card h3 { margin: 6px 0 6px; font-size: 1.05em; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95em; }
+  .icon { font-size: 1.6em; }
+  code { background: var(--line); padding: 1px 6px; border-radius: 6px; font-size: 0.9em; }
+  footer { text-align: center; color: var(--muted); font-size: 0.9em; margin-top: 48px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8a3ffc"/><stop offset="1" stop-color="#c46bff"/></linearGradient></defs>
+      <path fill="url(#g)" d="M20 50a14 14 0 0 1-2-27.9A18 18 0 0 1 52 26a12 12 0 0 1-2 24z"/>
+      <rect x="26" y="31" width="12" height="10" rx="2" fill="#fff"/>
+      <path d="M28 31v-3a4 4 0 0 1 8 0v3" stroke="#fff" stroke-width="2.5" fill="none"/>
+    </svg>
+    <h1>Kumo</h1>
+    <p class="lead">A personal, end-to-end encrypted cloud file explorer on top of your own Google Drive accounts.</p>
+  </header>
+
+  <section class="grid">
+    <div class="card"><div class="icon">🔒</div><h3>Encrypted on your device</h3>
+      <p>Files are chunked, compressed where it helps and encrypted before upload. Google stores only unreadable data.</p></div>
+    <div class="card"><div class="icon">🧩</div><h3>Spread across accounts</h3>
+      <p>Chunks are distributed evenly across every Google Drive account you connect.</p></div>
+    <div class="card"><div class="icon">🗂️</div><h3>A real file manager</h3>
+      <p>Native desktop app with grid and list views, previews, a video player and a text editor.</p></div>
+    <div class="card"><div class="icon">🙈</div><h3>Sees only its own files</h3>
+      <p>Access is limited to the <code>drive.file</code> scope. No server, no developer backend.</p></div>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a> · <a href="https://github.com/f0rd2017/kumo-site">Source</a> · MIT License
+  </footer>
+</main>
+</body>
+</html>

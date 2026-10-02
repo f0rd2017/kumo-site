@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumo — Privacy policy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%238a3ffc' d='M20 50a14 14 0 0 1-2-27.9A18 18 0 0 1 52 26a12 12 0 0 1-2 24z'/%3E%3C/svg%3E">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1b26; --muted: #5f5b70; --bg: #f7f6fb; --card: #ffffff; --line: #e6e3f0; --accent: #8a3ffc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #eeecf6; --muted: #a7a2ba; --bg: #141219; --card: #1e1b26; --line: #2c2836; --accent: #b98aff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  article { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 8px 28px 24px; }
+  h1 { margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.15em; margin-top: 28px; }
+  .muted { color: var(--muted); margin-top: 0; }
+  code { background: var(--line); padding: 1px 6px; border-radius: 6px; font-size: 0.9em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+<article>
+  <h1>Privacy policy</h1>
+  <p class="muted">Kumo · last updated October 2, 2026</p>
+
+  <h2>What Kumo is</h2>
+  <p>Kumo is a desktop application for personal use that stores the user's own files in the user's own
+  Google Drive accounts, encrypted on the user's device.</p>
+
+  <h2>Data Kumo accesses</h2>
+  <ul>
+    <li><b>Google Drive, <code>drive.file</code> scope only.</b> Kumo creates a "Kumo" folder in your Drive and
+    reads, writes and deletes only the files it created there. It cannot see any other files in your Drive.</li>
+    <li><b>Your email address</b> (<code>openid</code>, <code>email</code>) — only to show which account is connected.</li>
+  </ul>
+
+  <h2>How the data is used and stored</h2>
+  <ul>
+    <li>Your files are compressed and encrypted on your computer (XChaCha20-Poly1305) before they are uploaded.
+    The encryption key is derived from your password and never leaves your device unencrypted. Google stores
+    only encrypted data that cannot be read without your password.</li>
+    <li>Sign-in tokens are stored on your device and inside your encrypted Kumo index.</li>
+    <li>Kumo has no server. No data is sent to the developer or to any third party; Kumo communicates only with
+    Google's APIs on your behalf.</li>
+    <li>Kumo does not use your data for advertising, analytics, or training of any models, and does not sell or
+    share it.</li>
+  </ul>
+
+  <h2>Google API Services User Data Policy</h2>
+  <p>Kumo's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Deleting files in Kumo deletes their encrypted parts from your Drive. You can remove everything by deleting
+  the "Kumo" folder in Google Drive and revoking Kumo's access at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="https://github.com/f0rd2017/kumo-site/issues">github.com/f0rd2017/kumo-site/issues</a>.</p>
+
+  <p><a href="./">← Kumo</a></p>
+</article>
+</main>
+</body>
+</html>
